@@ -40,7 +40,7 @@ function App() {
 		let token = localStorage.getItem('token');
 		if (token) {
 			const url =
-				'http://localhost:8080/api/auth/jwt/verify';
+				'https://pizza-backend-gules.vercel.app/api/auth/jwt/verify';
 			axios
 				.get(url, {
 					params: {
