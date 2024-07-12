@@ -7,10 +7,12 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import store from './store';
+import { Analytics } from "@vercel/analytics/react"
 ReactDOM.render(
 	<Provider store={store}>
 		<ChakraProvider>
 			<BrowserRouter>
+			<Analytics/>
 				<App />
 			</BrowserRouter>
 		</ChakraProvider>
