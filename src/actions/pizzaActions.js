@@ -5,7 +5,7 @@ export const getAllPizzas = () => async (dispatch) => {
 
 	try {
 		const response = await axios.get(
-			'http://localhost:8080/api/pizzas/getallpizzas',
+			'https://pizza-backend-gules.vercel.app/api/pizzas/getallpizzas',
 		);
 		// console.log(response);
 		dispatch({ type: 'GET_PIZZAS_SUCCESS', payload: response.data });
@@ -18,7 +18,7 @@ export const addPizza = (pizza) => async (dispatch) => {
 	dispatch({ type: 'ADD_PIZZA_REQUEST' });
 	try {
 		const response = await axios.post(
-			'http://localhost:8080/api/pizzas/addpizza',
+			'https://pizza-backend-gules.vercel.app/api/pizzas/addpizza',
 			{ pizza: pizza },
 		);
 		console.log(response);
@@ -33,7 +33,7 @@ export const getPizzaById = (pizzaid) => async (dispatch) => {
 	dispatch({ type: 'GET_PIZZA_BY_ID_REQUEST' });
 	try {
 		const response = await axios.post(
-			'http://localhost:8080/api/pizzas/getpizzabyid',
+			'https://pizza-backend-gules.vercel.app/api/pizzas/getpizzabyid',
 			{ pizzaid: pizzaid },
 		);
 		console.log(response);
